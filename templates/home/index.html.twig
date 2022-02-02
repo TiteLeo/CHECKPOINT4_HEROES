@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello Leo!{% endblock %}
+{% block title %}Les supers{% endblock %}
 
 {% block body %}
     <div class="container-fluid mb-5">
         <div class="row profil mt-5">
             <div class="col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center p-3 border border-1">
-                <h1 class="display-2 text-center mb-5">Welcome dans le monde des SUPERS!!! <a href="{{ path ('heros') }}"><i class="fas fa-mask"></i></a></h1>
+                <h1 class="display-2 text-center mb-5">Welcome dans le monde des SUPERS!!! <a href="{{ path ('heroes') }}"><i class="fas fa-mask"></i></a></h1>
                 <h2 class="text-center mt-4 mb-5 fs-3">Des Héros aux Vilains! </h2>
             </div>
         </div>
@@ -14,7 +14,7 @@
     {% include '_components/_swiper.html.twig' %}
 
     <h2 class="text-center mb-5"> Un peu d'histoire ne fait jamais de mal!!</h2>
-    <div class="container mt-1">
+    <div class="container mt-1 mb-5">
         <p>DC Comics, alors dirigé par Julius Schwartz, réanime le genre en 1956 : le quatrième numéro du magazine
             Showcase présente une nouvelle version de Flash, souvent considéré comme le point de départ de la période
             désignée sous le nom d'âge d'argent des comics20. Superman et Wonder Woman sont modernisés, et de nouvelles
