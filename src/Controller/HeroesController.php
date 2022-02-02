@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Character;
+
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,10 +14,12 @@ class HeroesController extends AbstractController
     /**
      * @Route("/heroes", name="heroes")
      */
-    public function index(): Response
+    public function index(ManagerRegistry $managerRegistry): Response
     {
+        $characterRepository = $managerRegistry->getRepository(Character::class);
+        $characters = $characterRepository->findAll();
         return $this->render('heroes/index.html.twig', [
-            'controller_name' => 'HeroesController',
+            'heroes' => '$heroes',
         ]);
     }
 

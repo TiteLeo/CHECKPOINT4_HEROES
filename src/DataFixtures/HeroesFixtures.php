@@ -23,6 +23,9 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character->setWeakness('Son humanité, sa moralité et sa vulnérabilité');
         $character->setUrl('https://voyage-onirique.com/wp-content/uploads/2021/03/batman-throne-4k-wallpaper.jpg');
         $character->addEquipment($this->getReference('fusil'));
+        $character->addEquipment($this->getReference('bombe'));
+        $character->addPower($this->getReference('force'));
+        $character->addPower($this->getReference('balle'));
         $manager->persist($character);
 
         $character2 = new Character();
@@ -35,6 +38,8 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character2->setStrength('Une super-force, une super-vitesse, une super-endurance, une super-résistance et de supers 5 sens!');
         $character2->setWeakness('La kryptonite, la magie, perte de pouvoirs sous les radiations d\'un soleil rouge...');
         $character2->setUrl('https://getwallpapers.org/wp-content/uploads/2021/08/Superman-Wallpaper-1.jpg');
+        $character2->addPower($this->getReference('force'));
+        $character2->addPower($this->getReference('balle'));
         $manager->persist($character2);
 
         $manager->flush();
@@ -44,6 +49,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
     {
         return [
             EquipmentsFixtures::class,
+            PowersFixtures::class,
         ];
     }
 }

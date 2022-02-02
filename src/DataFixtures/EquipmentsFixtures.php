@@ -17,6 +17,13 @@ class EquipmentsFixtures extends Fixture
         $this->addReference('fusil', $equipment);
         $manager->persist($equipment);
 
+        $equipment2 = new Equipment();
+        $equipment2->setName('Bat-grenade');
+        $equipment2->setType('Bombe');
+        $equipment2->setDescription('La Bat-bombe est un explosif très puissant sous forme de boules qui s\'enclenchent manuellement et qui sont destinées le plus souvent à faire sauter des véhicules, des serrures blindées ou carrément pour créer un passage sur des murs épais. N\'étant pas plus grand qu\'une balle de golf, ces minis-explosifs sont faciles à transporter, nécessaires dans certains cas mais sont très rarement utilisés pour des raisons offensives.');
+        $this->addReference('bombe', $equipment2);
+        $manager->persist($equipment2);
+
         $manager->flush();
     }
 }
