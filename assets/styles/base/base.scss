@@ -1,0 +1,13 @@
+h1, h2, h3 {
+  font-family: 'Bangers', cursive;
+}
+body {
+  color: $primary !important;
+  background-color: $secondary !important;
+}
+
+footer {
+  width:100%;
+  position: fixed;
+  margin-top: 300px;
+}
