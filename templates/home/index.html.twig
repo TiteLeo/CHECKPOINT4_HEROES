@@ -1,7 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello Super Heros!!!{% endblock %}
+{% block title %}Hello Leo!{% endblock %}
 
 {% block body %}
+    <div class="container-fluid mb-5">
+        <div class="row profil mt-5">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center p-3 border border-1">
+                <h1 class="display-2 text-center mb-5">Welcome dans le monde des SUPERS!!! <a href="{{ path ('heros') }}"><i class="fas fa-mask"></i></a></h1>
+                <h2 class="text-center mt-4 mb-5 fs-3">Des Héros aux Vilains! </h2>
+            </div>
+        </div>
+    </div>
+    {% include '_components/_swiper.html.twig' %}
+
+    <h2 class="text-center mb-5"> Un peu d'histoire ne fait jamais de mal!!</h2>
+    <div class="container mt-1">
+        <p>DC Comics, alors dirigé par Julius Schwartz, réanime le genre en 1956 : le quatrième numéro du magazine
+            Showcase présente une nouvelle version de Flash, souvent considéré comme le point de départ de la période
+            désignée sous le nom d'âge d'argent des comics20. Superman et Wonder Woman sont modernisés, et de nouvelles
+            versions de personnages comme Green Lantern, Atom ou Hawkman sont proposées aux lecteurs. Le scénariste Gardner
+            Fox fait se rencontrer en 1961 les deux versions de Flash, qui s'avèrent vivre dans des mondes parallèles,
+            entraînant la mise en place d'un Univers DC particulièrement complexe21. Comme avant-guerre avec la Société
+            de justice d'Amérique, les nouveaux personnages DC se réunissent au sein de la Ligue de justice d'Amérique.</p>
+
+        <p>Le responsable de Marvel Comics, Martin Goodman, lance au début des années 1960 ses propres histoires de super-héros,
+            rédigées pour la plupart par Stan Lee, son cousin par alliance. La concurrence est au départ modeste, DC étant alors
+            le distributeur de Marvel. Stan Lee s'associe au dessinateur Jack Kirby, créateur de Captain America, pour lancer en
+            novembre 1961 la série Les Quatre Fantastiques, une équipe de quatre aventuriers qui n'ont ni identité secrète,
+            ni costumes (dans leurs trois premiers numéros). Au quatrième numéro, ils endossent un uniforme uni, très différent
+            du costume traditionnel. Suit, en mai 1962, Hulk, un scientifique transformé en monstre et en antihéros pourchassé
+            par l'armée. Puis Lee et Kirby créent Thor, le dieu nordique surpuissant dont l'alter ego est un médecin handicapé.
+            La quatrième création de Lee, Spider-Man (illustré initialement par Steve Ditko) est un adolescent conçu comme proche
+            des jeunes lecteurs de la série. Les bandes dessinées conçues par Lee, tout en demeurant destinées à de jeunes lecteurs,
+            se signalent par un surcroît de maturité, un effort étant fait pour donner aux super-héros une psychologie plus complexe,
+            éloignée du cliché du héros infaillible22. Les dessins de Jack Kirby, qui deviennent très novateurs au fur et à mesure
+            des années 1960, contribuent à la popularité croissante des séries de Marvel Comics</p>
+
+    </div>
 
 {% endblock %}
