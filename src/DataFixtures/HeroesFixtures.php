@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Character;
+use App\Entity\Equipment;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
@@ -21,6 +22,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character->setStrength('Son intelligence et sa fortune qui lui permettent d\'avoir des équipements de pointe.');
         $character->setWeakness('Son humanité, sa moralité et sa vulnérabilité');
         $character->setUrl('https://voyage-onirique.com/wp-content/uploads/2021/03/batman-throne-4k-wallpaper.jpg');
+        $character->addEquipment($this->getReference('fusil'));
         $manager->persist($character);
 
         $character2 = new Character();
@@ -38,4 +40,10 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $manager->flush();
     }
 
+    public function getDependencies()
+    {
+        return [
+            EquipmentsFixtures::class,
+        ];
+    }
 }
