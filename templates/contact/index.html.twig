@@ -1,21 +1,26 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Super Message{% endblock %}
 
-{% block body %}
-    <div class="container-fluid mb-5">
-        <div class="row profil mt-5">
-            <div class="form-profil col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center p-3 border border-1">
-                <h1 class="display-2 text-center mb-5 mt-5">Laisse moi un Super Message</h1>
-                <div class="col-10 col-lg-5 mx-auto">
-                    {{ form_start(contactForm) }}
-                    {{ form_widget(contactForm)}}
-                    <div class="text-center d-grid gap-2 col-6 mx-auto">
-                        <button type="submit" class="btn btn-danger fw-bold mt-3 mb-5">Vers l'infini et au-delà</button>
+
+    {% block body %}
+
+        <div class="container-fluid">
+            <div class="row contact" >
+                <div class="form-contact col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center border-1">
+                    <div class="col-md-12 mt-5">
+                        <h1 class="display-2 text-center mb-5 mt-5">Laisse moi un Super Message</h1>
                     </div>
-                    {{ form_end(contactForm) }}
+                    <div class="row mb-5">
+                        <div class="form-contact col-11 col-sm-9 col-md-7 col-lg-6 mx-auto justify-content-center p-3">
+                            {{ form_start(contactForm) }}
+                            {{ form_widget(contactForm)}}
+                            <div class="text-center d-grid gap-2 col-6 mx-auto">
+                                <button type="submit" class="btn btn-danger fw-bold mt-3 mb-5">Vers l'infini et au-delà</button>
+                            </div>
+                            {{ form_end(contactForm) }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-{% endblock %}
+    {% endblock %}
