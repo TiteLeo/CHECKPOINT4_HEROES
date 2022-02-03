@@ -40,7 +40,7 @@ class EvilsController extends AbstractController
     }
 
     /**
-     * @Route("/heroes/fifilles", name="fifilles")
+     * @Route("/evils/fifilles", name="fifilles")
      */
     public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
@@ -55,7 +55,7 @@ class EvilsController extends AbstractController
     }
 
     /**
-     * @Route("/heroes/undefined", name="undefined")
+     * @Route("/evils/undefined", name="comingOut")
      */
     public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
@@ -63,8 +63,8 @@ class EvilsController extends AbstractController
         foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Undefined']) as $character) {
             $characters[] = $character;
         }
-        return $this->render('heroes/undefined.html.twig', [
-            'heroes' => $characterRepository->findAll(),
+        return $this->render('evils/undefined.html.twig', [
+            'evils' => $characterRepository->findAll(),
             'characters' => $characters
         ]);
     }
