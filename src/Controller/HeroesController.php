@@ -28,20 +28,28 @@ class HeroesController extends AbstractController
     /**
      * @Route("/heroes/muscles", name="muscles")
      */
-    public function muscles(): Response
+    public function muscles(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
+        $characterRepository = $managerRegistry->getRepository(Character::class);
+        $characters = $characterRepository->findBy(['sex'=> 'masculin']);
+
         return $this->render('heroes/muscles.html.twig', [
-            'controller_name' => 'HeroesController',
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
 
     /**
      * @Route("/heroes/feminists", name="feminists")
      */
-    public function feminists(): Response
+    public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
-        return $this->render('heroes/feminists.html.twig', [
-            'controller_name' => 'HeroesController',
+        $characterRepository = $managerRegistry->getRepository(Character::class);
+        $characters = $characterRepository->findBy(['sex'=> 'feminin']);
+
+        return $this->render('heroes/muscles.html.twig', [
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
 
