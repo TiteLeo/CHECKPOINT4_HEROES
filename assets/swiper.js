@@ -1,4 +1,6 @@
-import Swiper from 'swiper'
+import Swiper from 'swiper/bundle';
+
+import 'swiper/css/bundle';
 
 const swiper = new Swiper('#swiper', {
     // Optional parameters
@@ -6,10 +8,6 @@ const swiper = new Swiper('#swiper', {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-        delay:2000,
-    },
-    navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        delay:3000,
     },
 })
