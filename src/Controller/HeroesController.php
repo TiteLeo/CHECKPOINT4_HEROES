@@ -30,23 +30,26 @@ class HeroesController extends AbstractController
      */
     public function muscles(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
-        $characterRepository = $managerRegistry->getRepository(Character::class);
-        $characters = $characterRepository->findBy(['sex'=> 'masculin']);
-
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Masculin']) as $character) {
+                $characters[] = $character;
+        }
         return $this->render('heroes/muscles.html.twig', [
             'heroes' => $characterRepository->findAll(),
             'characters' => $characters
         ]);
     }
 
+
     /**
      * @Route("/heroes/feminists", name="feminists")
      */
     public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
-        $characterRepository = $managerRegistry->getRepository(Character::class);
-        $characters = $characterRepository->findBy(['sex'=> 'feminin']);
-
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Feminin']) as $character) {
+            $characters[] = $character;
+        }
         return $this->render('heroes/muscles.html.twig', [
             'heroes' => $characterRepository->findAll(),
             'characters' => $characters
@@ -56,10 +59,16 @@ class HeroesController extends AbstractController
     /**
      * @Route("/heroes/undefined", name="undefined")
      */
-    public function undefined(): Response
+    public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Robot']) as $character) {
+            $characters[] = $character;
+        }
         return $this->render('heroes/undefined.html.twig', [
-            'controller_name' => 'HeroesController',
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
+
 }
