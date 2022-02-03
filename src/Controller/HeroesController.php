@@ -69,4 +69,14 @@ class HeroesController extends AbstractController
             'characters' => $characters
         ]);
     }
+    /**
+     * @Route("/heroes/show/{id}", name="heroes_show")
+     */
+    public function show(Character $character, CharacterRepository $characterRepository): Response
+    {
+        return $this->render('heroes/show.html.twig', [
+            'character' => $character
+        ]);
+
+    }
 }

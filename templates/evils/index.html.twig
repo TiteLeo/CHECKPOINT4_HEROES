@@ -21,7 +21,7 @@
                     <div class="card-body p-3 container-tertiary" >
                         <p class="card-text text-dark">Identité : {{ character.realName }}</p>
                         <p class="card-text text-dark">Force : {{ character.strength }}</p>
-                        <div class="text-center m-3"><a href="{{ path('home') }}" type="button" class="btn btn-dark">Voir le Super Héros </a></div>
+                        <div class="text-center m-3"><a href="{{ path('evils_show', {id: character.id}) }}" type="button" class="btn btn-dark">Voir le Super Vilain </a></div>
                     </div>
                 </div>
             </div>
