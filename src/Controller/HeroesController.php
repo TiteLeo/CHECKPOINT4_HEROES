@@ -49,7 +49,7 @@ class HeroesController extends AbstractController
         foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Feminin']) as $character) {
             $characters[] = $character;
         }
-        return $this->render('heroes/muscles.html.twig', [
+        return $this->render('heroes/feminists.html.twig', [
             'heroes' => $characterRepository->findAll(),
             'characters' => $characters
         ]);

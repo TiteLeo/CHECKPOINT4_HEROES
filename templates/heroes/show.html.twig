@@ -3,7 +3,40 @@
 {% block title %} Les Supers Héros{% endblock %}
 
 {% block body %}
-    <div class="container-fluid mb-5">
+<div class=" super-show ">
+    <div class="row justify-content-center">
+        <div class="p-3 col-md-7 mr-auto">
+                <div class="px-5 col-md-8 text-center mx-auto">
+                    <div class="row">
+                        <h1 class="text-red">{{ character.realName }} / {{ character.heroName }}</h1>
+                        <div class="col-md-12"><img class="img-fluid d-block mb-3 mx-auto" src="{{ character.url }}" >
+                        </div>
+                    </div>
+                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="text-center mb-5"> </div>
+                        <div class="container-fluid mt-1 mb-5">
+                            <p>{{ character.story }}</p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    {#  <div class="container-fluid mb-5">
         <div class="row profil mt-5">
             <div class="col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center p-3 border border-1">
                 <h1 class="display-2 text-center mb-5"> {{ character.heroName}} <a href="{{ path ('home') }}"><i class="fas fa-mask"></i></a></h1>
@@ -25,6 +58,6 @@
                 </div>
             </div>
     </div>
-    </div>
+    </div> #}
 
 {% endblock %}
