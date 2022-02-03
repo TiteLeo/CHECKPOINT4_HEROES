@@ -36,7 +36,7 @@ class CharacterAddController extends AbstractController
     }
 
    /* /**
-     * @Route("/power/add", name="power_add", methodes={"GET", "POST"})
+     * @Route("/power/add", name="power_add", methods={"GET", "POST"})
      */
    /* public function addPower(
         Request         $request,

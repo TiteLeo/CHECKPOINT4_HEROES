@@ -1,20 +1,21 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Super Message{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container-fluid mb-5">
+        <div class="row profil mt-5">
+            <div class="form-profil col-11 col-sm-9 col-md-7 col-lg-10 mx-auto justify-content-center p-3 border border-1">
+                <h1 class="display-2 text-center mb-5 mt-5">Laisse moi un Super Message</h1>
+                <div class="col-10 col-lg-5 mx-auto">
+                    {{ form_start(contactForm) }}
+                    {{ form_widget(contactForm)}}
+                    <div class="text-center d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-danger fw-bold mt-3 mb-5">Vers l'infini et au-delà</button>
+                    </div>
+                    {{ form_end(contactForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/eleonore/Bureau/Heros/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/eleonore/Bureau/Heros/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}

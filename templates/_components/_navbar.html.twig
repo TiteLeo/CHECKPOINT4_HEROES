@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <a class="navbar-brand mt-3 mb-3" href="{{ path ('home') }}">Super Heros</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,14 +37,10 @@
                         <li><hr class="dropdown-divider"></li>
                     </ul>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nous contacter</a>
+                    <a class="nav-link" href="{{ path ('contact') }}">Nous contacter</a>
                 </li>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
