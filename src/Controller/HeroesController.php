@@ -40,7 +40,6 @@ class HeroesController extends AbstractController
         ]);
     }
 
-
     /**
      * @Route("/heroes/feminists", name="feminists")
      */
@@ -70,5 +69,4 @@ class HeroesController extends AbstractController
             'characters' => $characters
         ]);
     }
-
 }
