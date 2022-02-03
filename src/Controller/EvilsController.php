@@ -24,4 +24,49 @@ class EvilsController extends AbstractController
             'characters' => $characters
         ]);
     }
+    /**
+     * @Route("/evils/ugly", name="ugly")
+     */
+    public function muscles(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
+    {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Masculin']) as $character) {
+            $characters[] = $character;
+        }
+        return $this->render('evils/ugly.html.twig', [
+            'evils' => $characterRepository->findAll(),
+            'characters' => $characters
+        ]);
+    }
+
+    /**
+     * @Route("/evils/fifilles", name="fifilles")
+     */
+    public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
+    {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Feminin']) as $character) {
+            $characters[] = $character;
+        }
+        return $this->render('evils/fifilles.html.twig', [
+            'evils' => $characterRepository->findAll(),
+            'characters' => $characters
+        ]);
+    }
+
+    /**
+     * @Route("/evils/undefined", name="comingOut")
+     */
+    public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
+    {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Undefined']) as $character) {
+            $characters[] = $character;
+        }
+        return $this->render('evils/undefined.html.twig', [
+            'evils' => $characterRepository->findAll(),
+            'characters' => $characters
+        ]);
+    }
+
 }

@@ -28,30 +28,45 @@ class HeroesController extends AbstractController
     /**
      * @Route("/heroes/muscles", name="muscles")
      */
-    public function muscles(): Response
+    public function muscles(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Masculin']) as $character) {
+                $characters[] = $character;
+        }
         return $this->render('heroes/muscles.html.twig', [
-            'controller_name' => 'HeroesController',
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
 
     /**
      * @Route("/heroes/feminists", name="feminists")
      */
-    public function feminists(): Response
+    public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
-        return $this->render('heroes/feminists.html.twig', [
-            'controller_name' => 'HeroesController',
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Feminin']) as $character) {
+            $characters[] = $character;
+        }
+        return $this->render('heroes/muscles.html.twig', [
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
 
     /**
      * @Route("/heroes/undefined", name="undefined")
      */
-    public function undefined(): Response
+    public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
+        $characters = [];
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Undefined']) as $character) {
+            $characters[] = $character;
+        }
         return $this->render('heroes/undefined.html.twig', [
-            'controller_name' => 'HeroesController',
+            'heroes' => $characterRepository->findAll(),
+            'characters' => $characters
         ]);
     }
 }
