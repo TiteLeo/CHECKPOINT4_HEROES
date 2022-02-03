@@ -68,5 +68,14 @@ class EvilsController extends AbstractController
             'characters' => $characters
         ]);
     }
+    /**
+     * @Route("/evils/show/{id}", name="evils_show")
+     */
+    public function show(Character $character, CharacterRepository $characterRepository): Response
+    {
+        return $this->render('evils/show.html.twig', [
+            'character' => $character
+        ]);
 
+    }
 }
