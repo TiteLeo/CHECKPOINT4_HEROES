@@ -62,7 +62,7 @@ class HeroesController extends AbstractController
     public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
         $characters = [];
-        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Robot']) as $character) {
+        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Undefined']) as $character) {
             $characters[] = $character;
         }
         return $this->render('heroes/undefined.html.twig', [
