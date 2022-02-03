@@ -30,15 +30,14 @@ class EvilsController extends AbstractController
     public function muscles(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
         $characters = [];
-        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Masculin']) as $character) {
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Masculin']) as $character) {
             $characters[] = $character;
         }
-        return $this->render('heroes/muscles.html.twig', [
-            'heroes' => $characterRepository->findAll(),
+        return $this->render('evils/ugly.html.twig', [
+            'evils' => $characterRepository->findAll(),
             'characters' => $characters
         ]);
     }
-
 
     /**
      * @Route("/heroes/fifilles", name="fifilles")
@@ -46,11 +45,11 @@ class EvilsController extends AbstractController
     public function feminists(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
         $characters = [];
-        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Feminin']) as $character) {
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Feminin']) as $character) {
             $characters[] = $character;
         }
-        return $this->render('heroes/muscles.html.twig', [
-            'heroes' => $characterRepository->findAll(),
+        return $this->render('evils/fifilles.html.twig', [
+            'evils' => $characterRepository->findAll(),
             'characters' => $characters
         ]);
     }
@@ -61,7 +60,7 @@ class EvilsController extends AbstractController
     public function undefined(ManagerRegistry $managerRegistry, CharacterRepository $characterRepository): Response
     {
         $characters = [];
-        foreach ($characterRepository->findBy(['isNasty' => false, 'sex' => 'Robot']) as $character) {
+        foreach ($characterRepository->findBy(['isNasty' => true, 'sex' => 'Undefined']) as $character) {
             $characters[] = $character;
         }
         return $this->render('heroes/undefined.html.twig', [
