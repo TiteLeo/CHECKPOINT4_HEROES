@@ -145,7 +145,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
 
         $character7 = new Character();
         $character7->setRealName('Mega Man');
-        $character7->setSex('Indefini');
+        $character7->setSex('Undefined');
         $character7->setHeroName('Mega Man');
         $character7->setStory('En 20XX, un robot très sophistiqué du nom de Rock se fait transformer en robot de combat par son créateur, 
         le professeur Light, afin d\'affronter les armées de robots du sinistre docteur Wily. Il devient alors connu sous le nom de Mega Man');
@@ -170,7 +170,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character8->setIsNasty(false);
         $character8->setStrength('Résistance à la magie et projection astrale');
         $character8->setWeakness('Sa naiveté et son humanité');
-        $character8->setUrl('https://blog.mezcotoyz.com/content/images/2017/08/Newsbanner-02-Wwblog.jpg');
+        $character8->setUrl('https://images.hdqwalls.com/wallpapers/2017-wonder-woman-4k-nn.jpg');
         $character8->addPower($this->getReference('force'));
         $character8->addPower($this->getReference('régénération'));
         $character->addEquipment($this->getReference('lasso'));
@@ -298,7 +298,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
 
         $character15 = new Character();
         $character15->setRealName('Ultron');
-        $character15->setSex('Indefini');
+        $character15->setSex('Undefined');
         $character15->setHeroName('Ultron');
         $character15->setStory('Ultron était une intelligence artificielle d\'un programme de maintien de la paix créé par Tony 
         Stark à partir des codes cryptés dérivées de la Pierre de l\'Esprit encastrée dans le Sceptre de Loki, retravaillé par lui-même 
