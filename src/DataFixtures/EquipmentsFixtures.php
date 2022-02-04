@@ -13,16 +13,38 @@ class EquipmentsFixtures extends Fixture
         $equipment = new Equipment();
         $equipment->setName('Fusil à impulsion électromagnétique');
         $equipment->setType('Fusil');
-        $equipment->setDescription('Cette arme non létale a le moyen d’émettre une onde électromagnétique invisible de très forte amplitude, afin de détruire ou de mettre hors d\'état de marche tout appareil électrique ou électronique pour une courte durée, dans un rayon d\'action déterminé ou une ligne de visée spécifique.');
         $this->addReference('fusil', $equipment);
         $manager->persist($equipment);
 
         $equipment2 = new Equipment();
-        $equipment2->setName('Bat-grenade');
+        $equipment2->setName('Grenade');
         $equipment2->setType('Bombe');
-        $equipment2->setDescription('La Bat-bombe est un explosif très puissant sous forme de boules qui s\'enclenchent manuellement et qui sont destinées le plus souvent à faire sauter des véhicules, des serrures blindées ou carrément pour créer un passage sur des murs épais. N\'étant pas plus grand qu\'une balle de golf, ces minis-explosifs sont faciles à transporter, nécessaires dans certains cas mais sont très rarement utilisés pour des raisons offensives.');
         $this->addReference('bombe', $equipment2);
         $manager->persist($equipment2);
+
+        $equipment3 = new Equipment();
+        $equipment3->setName('Pistolet');
+        $equipment3->setType('Arme à feu');
+        $this->addReference('pistolet', $equipment3);
+        $manager->persist($equipment3);
+
+        $equipment4 = new Equipment();
+        $equipment4->setName('Arc');
+        $equipment4->setType('Arme blanche');
+        $this->addReference('arc', $equipment4);
+        $manager->persist($equipment4);
+
+        $equipment5 = new Equipment();
+        $equipment5->setName('Sabres');
+        $equipment5->setType('Arme blanche');
+        $this->addReference('sabre', $equipment5);
+        $manager->persist($equipment5);
+
+        $equipment6 = new Equipment();
+        $equipment6->setName('Katana');
+        $equipment6->setType('Arme blanche');
+        $this->addReference('katana', $equipment6);
+        $manager->persist($equipment6);
 
         $manager->flush();
     }
