@@ -17,10 +17,22 @@ class PowersFixtures extends Fixture
         $manager->persist($power);
 
         $power2 = new Power();
-        $power2->setName('A l\'épreuve des balles');
+        $power2->setName('Pare balles');
         $power2->setDescription('Ne permet pas de tuer le héro lorsqu\'il endosse son rôle');
         $this->addReference('balle', $power2);
         $manager->persist($power2);
+
+        $power3 = new Power();
+        $power3->setName('Régénération');
+        $power3->setDescription('Un membre coupé? Pas grave, il repousse!');
+        $this->addReference('régénération', $power3);
+        $manager->persist($power3);
+
+        $power4 = new Power();
+        $power4->setName('Voler');
+        $power4->setDescription('Pratique en cas d\'embouteillage!');
+        $this->addReference('voler', $power4);
+        $manager->persist($power4);
 
         $manager->flush();
     }
