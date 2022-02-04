@@ -17,11 +17,23 @@
         {{ encore_entry_script_tags('swiper') }}
     {% endblock %}
 </head>
-
-{% include '_components/_navbar.html.twig' %}
-
-        {% block body %}{% endblock %}
-    {% include '_components/_footer.html.twig' %}
+<body>
+{% block globals %}
+{% endblock %}
+    {% include '_components/_navbar.html.twig' %}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="alert alert-success d-flex justify-content-center" role="alert">
+            <div class="alert alert-{{ label }}">
+                {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}
+{% block body %}{% endblock %}
 </body>
+{% include '_components/_footer.html.twig' %}
+
+<script src="/build/app.js"></script>
 
 

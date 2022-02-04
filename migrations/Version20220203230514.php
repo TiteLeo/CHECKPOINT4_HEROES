@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20220202150501 extends AbstractMigration
+final class Version20220203230514 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -24,7 +24,9 @@ final class Version20220202150501 extends AbstractMigration
         $this->addSql('CREATE TABLE character_power (character_id INT NOT NULL, power_id INT NOT NULL, INDEX IDX_5549E6C21136BE75 (character_id), INDEX IDX_5549E6C2AB4FC384 (power_id), PRIMARY KEY(character_id, power_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE character_equipment (character_id INT NOT NULL, equipment_id INT NOT NULL, INDEX IDX_546877B81136BE75 (character_id), INDEX IDX_546877B8517FE9FE (equipment_id), PRIMARY KEY(character_id, equipment_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE equipment (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, type VARCHAR(255) NOT NULL, description LONGTEXT DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE message (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, mail VARCHAR(255) NOT NULL, text LONGTEXT NOT NULL, choice VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE power (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, description LONGTEXT DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, email VARCHAR(180) NOT NULL, roles JSON NOT NULL, password VARCHAR(255) NOT NULL, UNIQUE INDEX UNIQ_8D93D649E7927C74 (email), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('ALTER TABLE character_power ADD CONSTRAINT FK_5549E6C21136BE75 FOREIGN KEY (character_id) REFERENCES `character` (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE character_power ADD CONSTRAINT FK_5549E6C2AB4FC384 FOREIGN KEY (power_id) REFERENCES power (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE character_equipment ADD CONSTRAINT FK_546877B81136BE75 FOREIGN KEY (character_id) REFERENCES `character` (id) ON DELETE CASCADE');
@@ -42,6 +44,8 @@ final class Version20220202150501 extends AbstractMigration
         $this->addSql('DROP TABLE character_power');
         $this->addSql('DROP TABLE character_equipment');
         $this->addSql('DROP TABLE equipment');
+        $this->addSql('DROP TABLE message');
         $this->addSql('DROP TABLE power');
+        $this->addSql('DROP TABLE user');
     }
 }
