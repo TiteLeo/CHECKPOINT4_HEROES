@@ -187,7 +187,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         quotidiennement. Elle œuvre notamment pour protéger les prostituées. Elle lutte à sa manière contre la criminalité, 
         et n’hésite pas à voler pour survivre, ce qui fait d’elle une ennemie de Batman, qui est tout de même séduit par son 
         apparence de femme fatale.');
-        $character9->setIsNasty(false);
+        $character9->setIsNasty(true);
         $character9->setStrength('Immunisée contre les poisons et toxines');
         $character9->setWeakness('Facilement distraite par un laser, comme un chat');
         $character9->setUrl('https://meragor.com/files/styles//ava_800_800_wm/igry-zhenschina-koshka_catwoman-39285.jpg');
@@ -308,6 +308,65 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character15->setWeakness('Sa naiveté et son humanité');
         $character15->setUrl('https://www.themarysue.com/wp-content/uploads/2021/02/ultron-is-a-complex-film.jpg');
         $manager->persist($character15);
+
+        $character16 = new Character();
+        $character16->setRealName('Thanos');
+        $character16->setSex('Undefined');
+        $character16->setHeroName('Thanos');
+        $character16->setStory('Thanos est un Titan, une branche de la race des Éternels (race créée par les Célestes)1 qui quittèrent 
+        la Terre il y a plusieurs siècles pour Titan, la lune de Saturne, et qui donna à leur peuple leur nom. Il est le fils du mentor 
+        Alars et de Sui-san. Contrairement à son frère Éros, Thanos naît avec un physique ingrat : une peau gris-pourpre et d\'une texture 
+        semblable à la roche1 et un corps massif. Il passe auprès des autres Titans pour anormal, porteur du mal génétique dit « syndrome 
+        du Déviant » et incapable de succéder à son père à la tête du peuple. Ce rôle est octroyé à son frère Éros. Rejeté par les siens, 
+        il trouve une compagne dans un temple souterrain oublié : dame Mort, qui fut son seul amour et sa seule consolation durant toute 
+        son adolescence. Instruit par elle, il acquiert un pouvoir surpassant celui de tous les autres Titans. L’âge venant, il commence 
+        à se révolter contre son père, et leurs disputes dégénérèrent en hostilité. À la suite d\'une expérience de Thanos, ayant coûté 
+        la vie à plusieurs de ses sujets, il est banni de Titan. De son aveu même, quelque chose en lui se brisa pendant ces siècles d’exil. 
+        Le cœur débordant de haine, il retourne sur Titan et lance une attaque nucléaire sur son propre monde, tuant des milliers de personnes, 
+        y compris sa mère, la seule personne qu’il aurait peut-être voulu épargner. Son père et son frère étant dans l’espace lors de 
+        l’attaque, ceux-ci échappèrent au massacre. Avec l\'aide des Vengeurs, Mentor put repousser Thanos, puis s\'attela à reconstruire 
+        son monde. ');
+        $character16->setIsNasty(true);
+        $character16->setStrength('Omniscient et omnipotent (avec le Gant de l\'infini)');
+        $character16->setWeakness('Son gant est sa force. Sans il est plus facile à battre.');
+        $character16->setUrl('https://wallpapers.com/images/high/infinity-gauntlet-thanos-u5vwqgcyeeobsyan.jpg');
+        $manager->persist($character16);
+
+        $character17 = new Character();
+        $character17->setRealName('Jean Grey');
+        $character17->setSex('Feminin');
+        $character17->setHeroName('Dark Phoenix');
+        $character17->setStory('Les pouvoirs de Jean Grey se manifestent dès ses dix ans, lorsqu’elle lit malgré elle les pensées de son 
+        amie Annie Richardson en train de mourir, percutée par une voiture. Jean sent l’esprit de son amie vaciller puis s’éteindre en mourant, 
+        et manque même de mourir avec elle. Pendant trois ans, ses parents font appel à des spécialistes pour sortir Jean de son état 
+        catatonique mais le seul qui y parvient est le professeur Charles Xavier. Celui-ci découvre qu’elle est une mutante dépassée par son 
+        pouvoir télépathique. Il décide donc de bloquer psychiquement cette capacité pour la laisser évoluer à son rythme. Tout en restant 
+        chez ses parents, Jean suit de nombreux entraînements avec le Pr Xavier destinés à développer et à contrôler ses pouvoirs 
+        télékinésiques, jusqu’à ce qu’elle soit adolescente. ');
+        $character17->setIsNasty(true);
+        $character17->setStrength('Immenses capacités cosmiques');
+        $character17->setWeakness('Sa jeunesse');
+        $character17->setUrl('https://wallpapercave.com/wp/wp4347968.jpg');
+        $manager->persist($character17);
+
+        $character18 = new Character();
+        $character18->setRealName('Michael Morbius ');
+        $character18->setSex('Undefined');
+        $character18->setHeroName('Morbius');
+        $character18->setStory('Le Docteur Michael Morbius est un scientifique grec atteint d’une rare maladie sanguine. Pris par le 
+        temps, il décide de se prendre lui-même pour cobaye d’un traitement expérimental. Il devient alors un vampire vivant. Contrairement 
+        aux vampires des mythes, Morbius n’est pas vulnérable à la croix ou à l’eau bénite, et le soleil ne fait que l’affaiblir. En revanche 
+        il peut voler, guérir de blessure et possède une force supérieure à la normale. Michael Morbius découvre également tardivement 
+        que sa morsure est contagieuse et peut transformer ses victimes en vampires vivants comme lui. D’abord pris par sa soif de sang, il 
+        décide de canaliser ses pulsions contre les criminels. Malgré plusieurs rechutes, Morbius tente de rester du bon côté et rejoint même 
+        l’ARMOR, une subdivision du SHIELD, et tente d’empêcher une invasion de la Terre par les Marvel Zombies. Cependant, ses méthodes 
+        violentes le mettent souvent face à d’autres héros, notamment Spider-Man.');
+        $character18->setIsNasty(false);
+        $character18->setStrength('Génie intellectuel, biologiste et biochimiste talentueux');
+        $character18->setWeakness('Dépendance à la consommation de sang humain');
+        $character18->setUrl('https://i.pinimg.com/originals/7e/32/c7/7e32c7ea702ebd4e3fddd2454c13fdf7.jpg');
+        $manager->persist($character18);
+
 
         $manager->flush();
     }
