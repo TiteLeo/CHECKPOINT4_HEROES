@@ -26,6 +26,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character->setUrl('https://voyage-onirique.com/wp-content/uploads/2021/03/batman-throne-4k-wallpaper.jpg');
         $character->addEquipment($this->getReference('fusil'));
         $character->addEquipment($this->getReference('bombe'));
+        $character->addEquipment($this->getReference('pistolet'));
         $character->addPower($this->getReference('force'));
         $character->addPower($this->getReference('balle'));
         $manager->persist($character);
@@ -49,6 +50,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character2->setUrl('https://getwallpapers.org/wp-content/uploads/2021/08/Superman-Wallpaper-1.jpg');
         $character2->addPower($this->getReference('force'));
         $character2->addPower($this->getReference('balle'));
+        $character->addPower($this->getReference('voler'));
         $manager->persist($character2);
 
         $character3 = new Character();

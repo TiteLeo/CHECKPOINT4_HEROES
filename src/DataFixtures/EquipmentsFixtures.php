@@ -46,6 +46,30 @@ class EquipmentsFixtures extends Fixture
         $this->addReference('katana', $equipment6);
         $manager->persist($equipment6);
 
+        $equipment7 = new Equipment();
+        $equipment7->setName('Cape');
+        $equipment7->setType('Arme blanche');
+        $this->addReference('cape', $equipment7);
+        $manager->persist($equipment7);
+
+        $equipment8 = new Equipment();
+        $equipment8->setName('Armure');
+        $equipment8->setType('Arme blanche');
+        $this->addReference('armure', $equipment8);
+        $manager->persist($equipment8);
+
+        $equipment9 = new Equipment();
+        $equipment9->setName('Bouclier');
+        $equipment9->setType('Arme blanche');
+        $this->addReference('bouclier', $equipment9);
+        $manager->persist($equipment9);
+
+        $equipment10 = new Equipment();
+        $equipment10->setName('Lasso');
+        $equipment10->setType('Arme blanche');
+        $this->addReference('lasso', $equipment10);
+        $manager->persist($equipment10);
+
         $manager->flush();
     }
 }
