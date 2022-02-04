@@ -69,6 +69,7 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character3->setUrl('https://avatarfiles.alphacoders.com/210/thumb-1920-210567.jpg');
         $character3->addPower($this->getReference('force'));
         $character3->addPower($this->getReference('balle'));
+        $character->addEquipment($this->getReference('armure'));
         $manager->persist($character3);
 
         $character4 = new Character();
@@ -85,7 +86,8 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character4->setWeakness('Son humanité');
         $character4->setUrl('https://www.art-deco-stickers.fr/18191-tm_thickbox_default/stickers-muraux-geant-spiderman.jpg');
         $character4->addPower($this->getReference('force'));
-        $character4->addPower($this->getReference('balle'));
+        $character4->addPower($this->getReference('agilité'));
+        $character->addEquipment($this->getReference('toile'));
         $manager->persist($character4);
 
         $character5 = new Character();
@@ -118,85 +120,194 @@ class HeroesFixtures extends Fixture implements DependentFixtureInterface
         $character5->addPower($this->getReference('force'));
         $character5->addPower($this->getReference('balle'));
         $character5->addPower($this->getReference('régénération'));
+        $character->addEquipment($this->getReference('katana'));
+        $character->addEquipment($this->getReference('pistolet'));
         $manager->persist($character5);
 
         $character6 = new Character();
-        $character6->setRealName('');
-        $character6->setSex('');
-        $character6->setHeroName('');
-        $character6->setStory('');
+        $character6->setRealName('Thor Odinson');
+        $character6->setSex('Masculin');
+        $character6->setHeroName('Thor');
+        $character6->setStory('Thor est fils adultérin d\'Odin, seigneur des dieux d\'Asgard, et Jord, aussi 
+        connue sous le nom de Gaea, une Ancienne Déesse de la Terre. Odin souhaitait engendrer un fils dont le pouvoir 
+        dériverait aussi bien d\'Asgard que de la Terre (Midgard) et chercha donc une union avec Jord. Odin créa une 
+        caverne en Norvège où Jord donna naissance à Thor. Quelques mois plus tard, une fois Thor allaité, Odin le 
+        ramena à Asgard pour y être élevé. A partir de ce moment, l\'épouse légitime d\'Odin, la déesse Frigga, 
+        considéra Thor comme son propre fils et l\'éleva comme tel. Thor n\'a appris que très récemment que Jord est sa mère naturelle. ');
         $character6->setIsNasty(false);
-        $character6->setStrength('');
-        $character6->setWeakness('');
-        $character6->setUrl('');
+        $character6->setStrength('il est immunisé à toutes les maladies des mortels ; il possède une résistance, une endurance et une vitesse supérieures à celles des Terriens');
+        $character6->setWeakness('Ragnarok');
+        $character6->setUrl('https://img.wallpapersafari.com/tablet/800/1280/96/58/RzmpIN.jpg');
         $character6->addPower($this->getReference('force'));
         $character6->addPower($this->getReference('balle'));
+        $character->addEquipment($this->getReference('marteau'));
         $manager->persist($character6);
 
         $character7 = new Character();
-        $character7->setRealName('');
-        $character7->setSex('');
-        $character7->setHeroName('');
-        $character7->setStory('');
+        $character7->setRealName('Mega Man');
+        $character7->setSex('Indefini');
+        $character7->setHeroName('Mega Man');
+        $character7->setStory('En 20XX, un robot très sophistiqué du nom de Rock se fait transformer en robot de combat par son créateur, 
+        le professeur Light, afin d\'affronter les armées de robots du sinistre docteur Wily. Il devient alors connu sous le nom de Mega Man');
         $character7->setIsNasty(false);
-        $character7->setStrength('');
-        $character7->setWeakness('');
-        $character7->setUrl('');
+        $character7->setStrength('Peut copier les armes de ses ennemis');
+        $character7->setWeakness('Aucun');
+        $character7->setUrl('https://p1.hiclipart.com/preview/879/40/19/megaman-classic-pose-render-mega-man-wallpaper-png-clipart.jpg');
         $character7->addPower($this->getReference('force'));
         $character7->addPower($this->getReference('balle'));
+        $character7->addPower($this->getReference('voler'));
+        $character->addEquipment($this->getReference('pistolet'));
         $manager->persist($character7);
 
         $character8 = new Character();
-        $character8->setRealName('');
-        $character8->setSex('');
-        $character8->setHeroName('');
-        $character8->setStory('');
+        $character8->setRealName('Diana Prince');
+        $character8->setSex('Feminin');
+        $character8->setHeroName('Wonder Woman');
+        $character8->setStory('Wonder Woman, de son vrai nom Diana, est une princesse originaire de Themyscira, "l\'île paradisiaque" 
+        uniquement peuplée de femmes, les Amazones. Elle est la fille Fille d\'Hippolyta et du dieu grec Zeus. Après qu\'un homme s\'est 
+        écrasé sur l\'île, Diana est envoyée sur Terre, aka le monde des hommes, afin de le ramener et de propager la paix et l’harmonie, 
+        deux valeurs chères à son peuple. Elle se fait alors passer pour une secrétaire, Diana Prince.');
         $character8->setIsNasty(false);
-        $character8->setStrength('');
-        $character8->setWeakness('');
-        $character8->setUrl('');
+        $character8->setStrength('Résistance à la magie et projection astrale');
+        $character8->setWeakness('Sa naiveté et son humanité');
+        $character8->setUrl('https://blog.mezcotoyz.com/content/images/2017/08/Newsbanner-02-Wwblog.jpg');
         $character8->addPower($this->getReference('force'));
-        $character8->addPower($this->getReference('balle'));
+        $character8->addPower($this->getReference('régénération'));
+        $character->addEquipment($this->getReference('lasso'));
         $manager->persist($character8);
 
         $character9 = new Character();
-        $character9->setRealName('');
-        $character9->setSex('');
-        $character9->setHeroName('');
-        $character9->setStory('');
+        $character9->setRealName('Selina Kyle');
+        $character9->setSex('Feminin');
+        $character9->setHeroName('CatWoman');
+        $character9->setStory('Issue d’une famille à problèmes, Catwoman, alias Selina Kyle, a eu une enfance compliquée. 
+        Suite au décès de sa mère suicidaire, elle est placée dans un foyer avec sa sœur Maggie, puisque leur père alcoolique 
+        est incapable de s’occuper d’elles. À 13 ans, Selina fugue de son centre d’accueil et s’installe à Gotham City, plus 
+        précisément dans le quartier de l’East End, particulièrement malfamé. La jeune femme est alors obligée de se défendre 
+        quotidiennement. Elle œuvre notamment pour protéger les prostituées. Elle lutte à sa manière contre la criminalité, 
+        et n’hésite pas à voler pour survivre, ce qui fait d’elle une ennemie de Batman, qui est tout de même séduit par son 
+        apparence de femme fatale.');
         $character9->setIsNasty(false);
-        $character9->setStrength('');
-        $character9->setWeakness('');
-        $character9->setUrl('');
+        $character9->setStrength('Immunisée contre les poisons et toxines');
+        $character9->setWeakness('Facilement distraite par un laser, comme un chat');
+        $character9->setUrl('https://meragor.com/files/styles//ava_800_800_wm/igry-zhenschina-koshka_catwoman-39285.jpg');
         $character9->addPower($this->getReference('force'));
-        $character9->addPower($this->getReference('balle'));
+        $character9->addPower($this->getReference('agilité'));
         $manager->persist($character9);
 
         $character10 = new Character();
-        $character10->setRealName('');
-        $character10->setSex('');
-        $character10->setHeroName('');
-        $character10->setStory('');
+        $character10->setRealName('Natalia « Natasha » Romanova');
+        $character10->setSex('Feminin');
+        $character10->setHeroName('Black Widow');
+        $character10->setStory('Natalia Romanova, une descendante de la famille impériale de Russie, est abandonnée très 
+        jeune et recueillie par le soldat Ivan Petrovitch. Ce dernier veille sur elle jusqu\'à son âge adulte et l\'assiste ensuite 
+        en tant que chauffeur. Natalia se révèle être une brillante élève et une athlète exceptionnelle, excellant notamment dans la
+        danse classique, devenant célèbre en Union soviétique comme ballerine. Elle épouse le pilote d\'essai soviétique renommé Alexei 
+        Shostakov, mais leur bonheur est de courte durée. Elle est ensuite recrutée par le KGB qui pensait que les Shostakov feraient 
+        de bons agents secrets.');
         $character10->setIsNasty(false);
-        $character10->setStrength('');
-        $character10->setWeakness('');
-        $character10->setUrl('');
+        $character10->setStrength('Athlète de niveau olympique, Maîtrise des arts martiaux');
+        $character10->setWeakness('Stérile');
+        $character10->setUrl('https://images5.alphacoders.com/107/thumb-350-1079623.jpg');
         $character10->addPower($this->getReference('force'));
-        $character10->addPower($this->getReference('balle'));
+        $character10->addPower($this->getReference('agilité'));
+        $character->addEquipment($this->getReference('pistolet'));
+        $character->addEquipment($this->getReference('sabre'));
         $manager->persist($character10);
 
         $character11 = new Character();
-        $character11->setRealName('');
-        $character11->setSex('');
-        $character11->setHeroName('');
-        $character11->setStory('');
+        $character11->setRealName('Kara Zor-El');
+        $character11->setSex('Feminin');
+        $character11->setHeroName('Super Girl');
+        $character11->setStory('Un vaisseau spatial s\'écrase sur la Terre. Superman intervient et est surpris de voir 
+        sortir une adolescente blonde habillée dans une version féminine de son costume. Elle lui explique que lors de l\'explosion 
+        de Krypton, la ville d\'Argos a survécu sur un large morceau de la planète qui est parti à la dérive dans l\'espace. Mais les 
+        citoyens ne sont pas tirés d\'affaire pour autant, le sol se transforme et la Kryptonite qui le compose devient mortelle. 
+        Zor-El construit un vaisseau spatial pour envoyer sa fille Kara sur la Terre où il a découvert qu\'un kryptonien, Superman / Kal-El, 
+        y vivait. Alura, sa femme, construit un costume identique à celui de Superman. Zor-El est le frère de Jor-El, le père de Kal-El, 
+        Superman et Kara sont cousins');
         $character11->setIsNasty(false);
-        $character11->setStrength('');
-        $character11->setWeakness('');
-        $character11->setUrl('');
+        $character11->setStrength('Même force que son cousin Superman');
+        $character11->setWeakness('Kryptonite');
+        $character11->setUrl('https://pbs.twimg.com/profile_images/1457759741283905542/GwhGqSsh_400x400.jpg');
         $character11->addPower($this->getReference('force'));
         $character11->addPower($this->getReference('balle'));
+        $character11->addPower($this->getReference('voler'));
+        $character11->addPower($this->getReference('régénération'));
         $manager->persist($character11);
+
+        $character12 = new Character();
+        $character12->setRealName('Harleen Quinzel');
+        $character12->setSex('Feminin');
+        $character12->setHeroName('Harley Quinn');
+        $character12->setStory('Sa passion pour les grands fous la pousse à s\'occuper du Joker. Son autorisation d\'exercer
+         lui est retirée et, ironie du sort, elle est internée dans l\'hôpital psychiatrique où elle exerçait. Une bonne partie de 
+         celui-ci est détruite par un tremblement de terre qui secoue Gotham City ; Harleen Quinzel en profite pour s\'échapper en 
+         enfilant un costume d\'arlequin (d\'où le jeu de mot que constitue son nom) et elle part aider son nouveau mentor dans 
+         l\'accomplissement de son destin. De son vrai nom Harleen Quinzel tire son alias Harley Quinn.');
+        $character12->setIsNasty(true);
+        $character12->setStrength('Spécialiste dans le domaine de la psychiatrie');
+        $character12->setWeakness('Sa folie');
+        $character12->setUrl('https://images6.alphacoders.com/714/thumb-1920-714381.jpg');
+        $character12->addPower($this->getReference('force'));
+        $character12->addPower($this->getReference('agilité'));
+        $character->addEquipment($this->getReference('pistolet'));
+        $character->addEquipment($this->getReference('fusil'));
+        $manager->persist($character12);
+
+        $character13 = new Character();
+        $character13->setRealName('Arthur Fleck');
+        $character13->setSex('Masculin');
+        $character13->setHeroName('Joker');
+        $character13->setStory('De toutes les histoires contées sur les origines du Joker, il y en a une qui revient plus 
+        régulièrement : l\'histoire de cet acteur comique raté qui est employé par une bande pour perpétrer un larcin dans une 
+        usine chimique. Cette bande engage toujours un homme de paille qui tient le rôle de "leader du groupe" au cas où ils seraient 
+        pris la main dans le sac. Dans ce cas, l\'attention est focalisée sur ce chef, Red Hood, qui porte un long casque rouge, 
+        détournant l\'attention vers le centre de la cible en quelque sorte. Notre acteur raté est donc engagé pour tenir ce rôle. 
+        Il accepte pour nourrir sa famille. Mais le casse est interrompu par le Batman, un justicier masqué qui sévit à Gotham 
+        City depuis quelques mois. Notre inconnu trébuche lors de l\'altercation et tombe dans une cuve de produits chimiques. 
+        Le jeune Batman ne peut rien faire pour le sauver. Pourtant, l\'inconnu survit mais il est défiguré : sa peau a blanchi, 
+        ses cheveux ont verdi et ses muscles zygomatiques sont paralysés; dessinant à tout jamais sur son visage un rire grimaçant. 
+        L\'homme perd tout y compris la raison. Le désormais nommé Joker attribue son état à Batman et jure de se venger. ');
+        $character13->setIsNasty(true);
+        $character13->setStrength('Tueur en série');
+        $character13->setWeakness('Mal entouré');
+        $character13->setUrl('https://i.pinimg.com/originals/66/a9/fa/66a9facfb8f3a8e3a728b8100746ac3b.jpg');
+        $character->addEquipment($this->getReference('pistolet'));
+        $manager->persist($character13);
+
+        $character14 = new Character();
+        $character14->setRealName('Loki');
+        $character14->setSex('Masculin');
+        $character14->setHeroName('Loki');
+        $character14->setStory('Loki est le fils de Laufey (en), le roi des géants des glaces de Jötunheim qui mourut lors d\'un 
+        combat contre Odin, roi des dieux d\'Asgard. Ce dernier décida d\'adopter Loki et l\'éleva aux côtés de son fils biologique, Thor. 
+        Tout au long de son enfance, Loki ne put jamais se faire à sa famille d\'adoption. Les Asgardiens valorisaient avant tout le courage, 
+        la force et les prouesses martiales, des qualités où Thor le dépassait de très loin. Les talents de Loki reposaient quant à eux dans 
+        d\'autres domaines, notamment la ruse et la magie. Il se plongea donc dans les arts mystiques, et devint le dieu des Mensonges et de 
+        la Tromperie. Sa jalousie pour Thor se mua en haine au fil des années, au point qu\'il en vint à souhaiter la mort de son frère adoptif.
+        Ses machinations prirent de plus en plus une tournure machiavélique et dangereuse, au point qu\'il passa du surnom de dieu du Mensonge 
+        à celui de dieu du Mal. ');
+        $character14->setIsNasty(true);
+        $character14->setStrength('Sa magie');
+        $character14->setWeakness('Ses propres ambitions');
+        $character14->setUrl('https://www.mordeo.org/files/uploads/2017/10/Tom-Hiddleston-In-Thor-Ragnarok-Movie-HD-Mobile-Wallpaper-950x1520.jpg');
+        $character14->addPower($this->getReference('force'));
+        $character14->addPower($this->getReference('régénération'));
+        $manager->persist($character14);
+
+        $character15 = new Character();
+        $character15->setRealName('Ultron');
+        $character15->setSex('Indefini');
+        $character15->setHeroName('Ultron');
+        $character15->setStory('Ultron était une intelligence artificielle d\'un programme de maintien de la paix créé par Tony 
+        Stark à partir des codes cryptés dérivées de la Pierre de l\'Esprit encastrée dans le Sceptre de Loki, retravaillé par lui-même 
+        et avec l\'aide de Bruce Banner.');
+        $character15->setIsNasty(true);
+        $character15->setStrength('Résistance à la magie et projection astrale');
+        $character15->setWeakness('Sa naiveté et son humanité');
+        $character15->setUrl('https://www.themarysue.com/wp-content/uploads/2021/02/ultron-is-a-complex-film.jpg');
+        $manager->persist($character15);
 
         $manager->flush();
     }

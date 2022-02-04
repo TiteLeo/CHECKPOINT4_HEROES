@@ -64,6 +64,12 @@ class PowersFixtures extends Fixture
         $this->addReference('meteo', $power8);
         $manager->persist($power8);
 
+        $power9 = new Power();
+        $power9->setName('Agilité');
+        $power8->setDescription('Souple comme un bretzel...ou pas!');
+        $this->addReference('agilité', $power9);
+        $manager->persist($power9);
+
 
         $manager->flush();
     }

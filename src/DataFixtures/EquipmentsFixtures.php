@@ -70,6 +70,19 @@ class EquipmentsFixtures extends Fixture
         $this->addReference('lasso', $equipment10);
         $manager->persist($equipment10);
 
+        $equipment11 = new Equipment();
+        $equipment11->setName('Lance-toile');
+        $equipment11->setType('Arme blanche');
+        $this->addReference('toile', $equipment11);
+        $manager->persist($equipment11);
+
+        $equipment12 = new Equipment();
+        $equipment12->setName('Marteau');
+        $equipment12->setType('Arme blanche');
+        $this->addReference('marteau', $equipment12);
+        $manager->persist($equipment12);
+
+
         $manager->flush();
     }
 }
